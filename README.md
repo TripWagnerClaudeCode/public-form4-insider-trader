@@ -36,7 +36,7 @@ The agents can say yes, no or exit. Position size, limits and stops come from co
 ## Setup
 
 ```bash
-git clone https://github.com/<you>/form4-insider-trader.git
+git clone https://github.com/TripWagnerClaudeCode/public-form4-insider-trader.git form4-insider-trader
 cd form4-insider-trader
 uv sync
 cp .env.example .env      # then fill it in

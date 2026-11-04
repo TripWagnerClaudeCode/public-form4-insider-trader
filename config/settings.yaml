@@ -1,0 +1,12 @@
+mode: paper
+agents:
+  backend: claude-cli
+paths:
+  # Markdown reports (relative = inside the repo; point it at a synced folder to read them anywhere)
+  reports_dir: reports
+features:   # upgrade features (spec 2026-11-04); the frozen control sets none
+  poll: true  # EDGAR live feed every 5 min, 09:45-15:45 ET (same rules, sooner)
+  memory: true  # Phase 2: scorecards, lessons, memory block in agent prompts (dir: memory/ in the repo)
+  research: true  # Phase 3: one cited deep dive (web + SEC) per full review, before the PM (6/day)
+  reviewers: true  # Phase 3: Risk Reviewer as a second vetoer on every PM buy
+  event_review: true  # Phase 3: intraday Event Review on held names in the poll (both agents must say exit)

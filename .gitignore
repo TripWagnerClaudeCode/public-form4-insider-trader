@@ -1,0 +1,12 @@
+.env
+.venv/
+/data/
+KILL_SWITCH
+__pycache__/
+.pytest_cache/
+.superpowers/
+/reports/
+/memory/
+/cache/
+*.db
+.claude/settings.local.json

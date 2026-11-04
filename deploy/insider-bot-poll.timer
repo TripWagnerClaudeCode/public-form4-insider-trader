@@ -1,0 +1,13 @@
+[Unit]
+Description=insider-bot EDGAR live-feed poll (every 5 min, 09:45-15:45 ET)
+
+[Timer]
+# 09:45-15:45 ET exactly, matching schedule.poll_window, so no run is spent outside the window.
+OnCalendar=Mon..Fri 09:45/5 America/New_York
+OnCalendar=Mon..Fri 10..14:00/5 America/New_York
+OnCalendar=Mon..Fri 15:00..45/5 America/New_York
+Persistent=false
+Unit=insider-bot-scan@poll.service
+
+[Install]
+WantedBy=timers.target

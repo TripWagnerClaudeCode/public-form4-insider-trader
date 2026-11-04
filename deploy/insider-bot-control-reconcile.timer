@@ -1,0 +1,10 @@
+[Unit]
+Description=insider-bot frozen v1 control reconcile
+
+[Timer]
+OnCalendar=Mon..Fri 16:20 America/New_York
+Persistent=true
+Unit=insider-bot-control-reconcile.service
+
+[Install]
+WantedBy=timers.target

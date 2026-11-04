@@ -1,0 +1,39 @@
+version: v001
+parent: null
+author: human
+created: 2026-11-03
+rationale: >-
+  Seed formula from the insider-trading literature. Open-market purchases (code P)
+  by insiders predict positive abnormal returns, unlike sales which are mostly
+  liquidity-driven (Lakonishok and Lee 2001; Jeng, Metrick and Zeckhauser 2003).
+  Signal is stronger for clusters of buyers, for CEO/CFO purchases, for large
+  dollar amounts relative to the insider's holdings, for first-time or
+  long-dormant buyers (Cohen, Malloy and Pomorski 2012, opportunistic vs routine
+  traders), for small caps, and after price drawdowns (contrarian buying).
+  Purchases under a 10b5-1 plan are pre-scheduled and carry less information,
+  so they are penalised. Weights are initial priors for the research loop to tune
+  within hard bounds.
+evidence: {}
+weights:
+  cluster: 0.25
+  dollars: 0.10
+  ceo_cfo: 0.20
+  chair: 0.05
+  directors: 0.05
+  size: 0.15
+  first_buy: 0.10
+  dip: 0.10
+  momentum_neg: 0.05
+  small_cap: 0.05
+  plan_penalty: 0.30
+review_threshold: 50
+buy_threshold: 60
+tiers:
+  - [60, 0.75]
+  - [70, 1.0]
+  - [80, 1.25]
+stop_loss_pct: 0.12
+time_stop_days: 40
+take_profit_pct: 0.25
+trailing_pct: 0.10
+window_days: 14

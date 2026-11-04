@@ -1,0 +1,10 @@
+[Unit]
+Description=insider-bot frozen v1 control morning scan
+
+[Timer]
+OnCalendar=Mon..Fri 10:05 America/New_York
+Persistent=true
+Unit=insider-bot-control-scan@am.service
+
+[Install]
+WantedBy=timers.target

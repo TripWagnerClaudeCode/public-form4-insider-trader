@@ -1,0 +1,10 @@
+[Unit]
+Description=insider-bot weekly lessons curation (after the 18:00 formula review)
+
+[Timer]
+OnCalendar=Sun 19:00 America/New_York
+Persistent=true
+Unit=insider-bot-curate.service
+
+[Install]
+WantedBy=timers.target

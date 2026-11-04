@@ -1,0 +1,10 @@
+[Unit]
+Description=insider-bot weekly review
+
+[Timer]
+OnCalendar=Sun 18:00 America/New_York
+Persistent=true
+Unit=insider-bot-review.service
+
+[Install]
+WantedBy=timers.target

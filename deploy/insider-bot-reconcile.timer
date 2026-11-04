@@ -1,0 +1,10 @@
+[Unit]
+Description=insider-bot daily reconcile
+
+[Timer]
+OnCalendar=Mon..Fri 16:15 America/New_York
+Persistent=true
+Unit=insider-bot-reconcile.service
+
+[Install]
+WantedBy=timers.target

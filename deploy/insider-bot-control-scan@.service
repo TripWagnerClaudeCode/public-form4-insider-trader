@@ -1,0 +1,9 @@
+[Unit]
+Description=insider-bot frozen v1 control scan (%i slot, simulated book, no orders)
+
+[Service]
+Type=oneshot
+WorkingDirectory=__REPO__
+Environment=PATH=%h/.local/bin:/usr/bin:/bin
+ExecStart=__UV__ run --frozen python -m insiderbot scan --mode control --slot %i
+TimeoutStartSec=45min

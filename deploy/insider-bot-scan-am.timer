@@ -1,0 +1,10 @@
+[Unit]
+Description=insider-bot morning scan
+
+[Timer]
+OnCalendar=Mon..Fri 10:00 America/New_York
+Persistent=true
+Unit=insider-bot-scan@am.service
+
+[Install]
+WantedBy=timers.target

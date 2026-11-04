@@ -1,0 +1,9 @@
+[Unit]
+Description=insider-bot daily reconcile
+
+[Service]
+Type=oneshot
+WorkingDirectory=__REPO__
+Environment=PATH=%h/.local/bin:/usr/bin:/bin
+ExecStart=__UV__ run --frozen python -m insiderbot reconcile
+TimeoutStartSec=30min
